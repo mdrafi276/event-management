@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "Web Development Summit 2023",
+        "image": "https://i.ibb.co/6mdBpBJ/people-working-with-documents-laptop.jpg",
+        "price": 149.99,
+        "description": "Join industry experts for a comprehensive web development summit.",
+        "cetagory":""
+    },
+    {
+        "id": 2,
+        "name": "Promming Workshop Series",
+        "image": "https://i.ibb.co/ZJ2FTs0/structured-building-construction-design-plan-concept.jpg",
+        "price": 79.99,
+        "description": "Learn machine learning through a series of hands-on workshops."
+    },
+    {
+        "id": 3,
+        "name": "Education Technology Conference",
+        "image": "https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg",
+        "price": 199.99,
+        "description": "Explore the latest innovations in education technology."
+    },
+    {
+        "id": 4,
+        "name": "Coding for Kids Camp",
+        "image": "https://i.ibb.co/txCMBBk/close-up-kid-while-having-technology-education-class.jpg",
+        "price": 49.99,
+        "description": "A fun and educational coding camp for young aspiring programmers."
+    },
+    {
+        "id": 5,
+        "name": "Digital Marketing Masterclass",
+        "image": "https://i.ibb.co/hgL4Cpm/11jan3.jpg",
+        "price": 99.99,
+        "description": "Master the art of digital marketing with expert guidance."
+    },
+    {
+        "id": 6,
+        "name": "STEM Education Expo",
+        "image": "https://i.ibb.co/5LygJr7/teens-doing-experiments-robotics-laboratory-boy-vr-headset-girl-protective-glasses.jpg",
+        "price": 69.99,
+        "description": "Discover the latest STEM education resources and practices at the expo."
+    }
+]
