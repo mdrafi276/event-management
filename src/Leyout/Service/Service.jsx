@@ -4,8 +4,7 @@ const Service = ({ServiceData}) => {
   
   const { name, description,price ,id, image} = ServiceData;
     return (
-      <div className="grid grid-cols-1 gap-5   md:grid-cols-2 lg:grid-cols-3">
-        <div className="card bg-gray-200 w-full lg:w-[360px]   shadow-xl">
+        <div className="card bg-gray-200 w-full mx-auto lg:w-[360px]   shadow-xl">
           <figure>
             <img src={image} alt="Shoes" />
           </figure>
@@ -17,7 +16,7 @@ const Service = ({ServiceData}) => {
               <Link to={`/service/${id}`}>
                 <button
                  
-                  className="btn hover:bg-black hover:text-white btn-secondary"
+                  className="btn hover:bg-black hover:text-white bg-orange-600"
                 >
                   Details
                 </button>
@@ -25,7 +24,7 @@ const Service = ({ServiceData}) => {
             </div>
           </div>
         </div>
-      </div>
+      
     );
 };
 

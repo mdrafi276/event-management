@@ -25,7 +25,7 @@ const ServiceHero = (ServiceData) => {
               corner..
             </p>
             <Link to={`/serviceData/${id}`}>
-              <button className="btn btn-secondary mt-2 hover:text-white hover:bg-black md:mt-8">
+              <button className="btn  bg-orange-600 mt-2 hover:text-white hover:bg-black md:mt-8">
                 Details
               </button>
             </Link>

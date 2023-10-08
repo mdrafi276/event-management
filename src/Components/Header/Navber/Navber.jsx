@@ -16,7 +16,10 @@ const Navber = () => {
            <Link to="/">Home</Link>
          </li>
          <li>
-           <Link to="/allDetails"> Details</Link>
+           <Link to="/allDetails"> All Details</Link>
+         </li>
+         <li>
+           <Link to="/serviceData/:id">Extra Details</Link>
          </li>
          <li>
            <Link to="/register">Register</Link>
@@ -29,8 +32,15 @@ const Navber = () => {
          <div className="  md:-w-full lg:max-w-6xl mx-auto">
            <div className="navbar rounded-lg">
              <div className="navbar-start">
-               <h1 id="title-h1" className="lg:text-2xl md:text-xl text-[15px] ">
-                 Educational Events{" "}
+               <h1
+                 id="title-h1"
+                 className="lg:text-2xl gap-2 flex items-center md:text-xl text-[15px] "
+               >
+                 {" "}
+                 <span>
+                   <img className="w-10 rounded-full" src="/src/assets/logo.jpg" alt="" />
+                 </span>
+                 <span>EDUCONFOMASTER</span>
                </h1>
                <div className="dropdown">
                  <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,16 +74,19 @@ const Navber = () => {
              <div className="navbar-end">
                <label tabIndex={0} className=" btn btn-ghost btn-circle avatar">
                  <div className="w-10 rounded-full">
-                   <img src="/" alt="" />
+                   <img src="./src/assets/user.png" alt="" />
                  </div>
                </label>
                {user ? (
-                 <button onClick={handleSignOut} className="btn btn-secondary hover:bg-black hover:text-white ">
+                 <button
+                   onClick={handleSignOut}
+                   className="btn bg-orange-600 hover:bg-black hover:text-white "
+                 >
                    LogOut
                  </button>
                ) : (
                  <Link to="/login">
-                   <button className="btn btn-secondary hover:bg-black hover:text-white ">
+                   <button className="btn bg-orange-600 hover:bg-black hover:text-white ">
                      Login
                    </button>
                  </Link>

@@ -12,6 +12,7 @@ import { AuthProvider } from './Components/Provider/AuthProvider';
 import InfoDetails from './Components/ExtraService/InfoDetails';
 import ExtraService from './Components/ExtraService/ExtraService';
 import ServiceDetails from './Components/Header/Page/Details/ServiceDetails';
+import PrivateRoute from './Components/Provider/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -38,17 +39,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        element: <InfoDetails></InfoDetails>,
+        element: <PrivateRoute><InfoDetails></InfoDetails></PrivateRoute>,
         loader: () => fetch("/Data/Data.json"),
       },
       {
         path: "/serviceData/:id",
-        element: <ExtraService></ExtraService>,
+        element: <PrivateRoute><ExtraService></ExtraService></PrivateRoute>,
         loader: () => fetch("/Data/Data.json"),
       },
       {
         path:'/allDetails',
-        element:<ServiceDetails></ServiceDetails>,
+        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader: () => fetch("/Data/Data.json"),
       }
     ],

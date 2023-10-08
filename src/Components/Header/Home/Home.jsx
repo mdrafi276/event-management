@@ -33,12 +33,12 @@ const Home = () => {
           <h1 id="our-service" className="text-4xl text-black text-center"> Our Service</h1>
         </div>
         <div className="flex justify-center flex-row-reverse">
-          <div className="grid  grid-cols-1  md:w-full lg:w-[1300px]md:text-center gap-10 mt-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid  grid-cols-1 xl:grid-cols-3 md:w-full md:text-center gap-10 mt-12  lg:grid-cols-2">
             {ServiceData.map((allData) => (
               <Service key={allData.id} ServiceData={allData}></Service>
             ))}
           </div>
-          <h1 className="hidden md:block text-white">hello wor</h1>
+         
         </div>
         <div>
           <ServiceHero></ServiceHero>

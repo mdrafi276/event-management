@@ -1,8 +1,8 @@
 
-import {   FaUnlock, FaPen, FaRegEnvelope } from "react-icons/fa";
+import {   FaUnlock,FaCamera, FaPen, FaRegEnvelope } from "react-icons/fa";
 
 import './Register.css'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { AuthContext,  } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
@@ -10,20 +10,22 @@ import Navber from "../../Navber/Navber";
 
 const Register = () => {
 const {createUser} = useContext(AuthContext)
-
-
+ const location = useLocation();
+ const navigate = useNavigate()
   const  handleRegister = e =>{
     console.log("hello");
    e.preventDefault();
    const email = e.target.email.value;
    const password = e.target.password.value;
-  
+   const photo = e.target.photo.value;
    const name = e.target.name.value;
-   console.log(email, password , name);
+   console.log(email, password , name, photo);
   //  create user on register
   createUser(email, password)
   .then(result => {
     console.log(result.user);
+    // navigate ater register 
+    navigate(location?.state ? location.state : '/')
   })
   .catch(error =>{
     console.error(error);
@@ -37,10 +39,10 @@ const {createUser} = useContext(AuthContext)
           <section>
             <div className="login-box">
               <form onSubmit={handleRegister}>
-                <h2>Register</h2>
+                
                 <div className="input-box">
                   <span className="icon">
-                    <FaUnlock></FaUnlock>
+                    <FaPen></FaPen>
                   </span>
                   
                   <input type="text" name="name" required id="" />
@@ -48,7 +50,7 @@ const {createUser} = useContext(AuthContext)
                 </div>
                 <div className="input-box">
                   <span className="icon">
-                   <FaPen></FaPen>
+                  <FaCamera></FaCamera>
                   </span>
                   <input type="text" name="photo" required id="" />
                   <label>Photo URL</label>

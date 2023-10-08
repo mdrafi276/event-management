@@ -3,11 +3,17 @@ import {  FaGoogle, FaRegEnvelope,  FaUnlock } from "react-icons/fa";
 
 import './Login.css'
 import Navber from "../../Navber/Navber";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 const Login = () => {
-  const {signIn} = useContext(AuthContext)
+  const {signIn,googleLogin} = useContext(AuthContext)
+ 
+
+  const location = useLocation();
+  console.log( "locatin page is comming  ",location);
+   const navigate = useNavigate();
+
      const handleLogin = e =>{
       console.log('hello world');
       e.preventDefault();
@@ -17,10 +23,17 @@ const Login = () => {
       signIn(email,password)
       .then(result =>{
         console.log(result.user);
+
+        navigate(location?.state ? location.state : '/')
       })
       .catch(error=>{
         console.error(error);
       })
+     }
+     const hangleGoogleLogin = () =>{
+      googleLogin()
+      .then()
+      .catch()
      }
 
     return (
@@ -70,7 +83,7 @@ const Login = () => {
                   </p>
                   <p className="">
                    
-                    <button className="btn mt-8 hover:bg-white rounded-full hover:text-black btn-outline w-full">
+                    <button onClick={hangleGoogleLogin} className="btn mt-8 hover:bg-white rounded-full hover:text-black btn-outline w-full">
                       <FaGoogle></FaGoogle>
                       Google
                     </button>

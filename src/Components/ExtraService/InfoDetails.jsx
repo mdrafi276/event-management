@@ -28,7 +28,7 @@ const InfoDetails = () => {
                   </div>
                 </div>
                 <Link to="/allDetails">
-                  <button className="btn btn-primary md:mt-40 mt-52 bg-pink-700 border-none hover:bg-black hover:text-white lg:mt-[28rem]  ">
+                  <button className="btn bg-orange-600 md:mt-40 mt-52 bg-orange-600 border-none hover:bg-black hover:text-white lg:mt-[28rem]  ">
                     All Details
                   </button>
                 </Link>
