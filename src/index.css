@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+#title-section{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+#title-h1{
+    font-family: 'Inter', sans-serif;
+        font-weight: 800;
+}
+#event-space{
+    font-family: 'Inter', sans-serif;
+        font-weight: 700;
+}
+#our-service{
+    font-family: 'Inter', sans-serif;
+        font-weight: 700;
+}

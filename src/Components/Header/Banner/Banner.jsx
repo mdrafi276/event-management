@@ -13,15 +13,15 @@ const Banner = () => {
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">
-                Studies can now be done online much easily
+            <div className=" md-w-full lg:max-w-[1000px] ">
+              <h1 className="mb-5 text-2xl text-white lg:text-6xl  w-full font-bold">
+               We are Event Professionals
               </h1>
-              <p className="mb-5">
+              <p className="mb-5 text-gray-300 lg:text-xl pt-6 ">
                 You can access 4900+ different courses from 300 professional
                 trainers for free
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              
             </div>
           </div>
         </div>

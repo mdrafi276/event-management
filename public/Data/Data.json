@@ -1,45 +1,55 @@
 [
     {
         "id": 1,
-        "name": "Web Development Summit 2023",
+        "name": "Protfulio Agency",
         "image": "https://i.ibb.co/6mdBpBJ/people-working-with-documents-laptop.jpg",
         "price": 149.99,
         "description": "Join industry experts for a comprehensive web development summit.",
-        "cetagory":""
+        "details": "Join us at Web Development Summit 2023, an educational event focused on the latest trends and technologies in web development. This immersive summit offers a unique opportunity to delve into cutting-edge strategies and gain valuable insights from leading industry experts. Whether you're a seasoned developer or just starting your journey, this event caters to all skill levels.Discover the newest tools and frameworks, learn about responsive design, and delve into the world of progressive web apps. Network with peers, share experiences, and forge valuable connections within the web development community. Enhance your coding prowess, stay updated with industry best practices, and ensure you're well-equipped to thrive in the rapidly evolving digital landscape. Don't miss this chance to propel your web development career to new heights",
+        "service_title" : "Elevate Your Event Space: Conference Hall Banner Set",
+        "service_details":"Enhance the atmosphere of your educational events with our versatile Conference Hall Interior Vertical Banner Set. These banners are designed to transform your conference space, creating a captivating environment that inspires learning and engagement in every corner. Whether you're hosting workshops, seminars, or academic conferences, our banner set adds a professional touch to your event, leaving a lasting impression on attendees. Elevate the ambiance, showcase important information, and reinforce your brand identity with these visually appealing banners. Make your educational events memorable and impactful with our Conference Hall Interior Vertical Banner Set.",
+        "service_img":"https://i.ibb.co/gRWkz6F/4280558-17629.jpg"
     },
     {
         "id": 2,
-        "name": "Promming Workshop Series",
+        "name": "Programming Workshop Series",
         "image": "https://i.ibb.co/ZJ2FTs0/structured-building-construction-design-plan-concept.jpg",
         "price": 79.99,
-        "description": "Learn machine learning through a series of hands-on workshops."
+        "description": "Learn machine learning through a series of hands-on workshops.",
+        "details" : "Introducing our Programming Workshop Series for educational events, a comprehensive program designed to elevate your coding skills. Attendees will have the chance to immerse themselves in various programming languages, acquire practical, hands-on experience, and open doors to exciting opportunities in the realm of technology and education. Whether you're a novice or an experienced coder, this series is tailored to meet your needs, providing valuable insights and fostering growth in your coding journey. Don't miss this opportunity to expand your skill set and excel in the dynamic world of programming. Join us and embark on a transformative learning experience today"
     },
     {
         "id": 3,
         "name": "Education Technology Conference",
         "image": "https://i.ibb.co/7ttkvQg/business-executives-show-their-approval-by-raising-hands.jpg",
         "price": 199.99,
-        "description": "Explore the latest innovations in education technology."
+        "description": "Explore the latest innovations in education technology.",
+         "details" :"Embark on a journey to uncover the most recent innovations in education technology. Our event is your gateway to explore the exciting developments that are revolutionizing the field of education. Join us to gain insights into emerging tools, strategies, and trends that are shaping the future of learning. Whether you are an educator, administrator, or technology enthusiast, this event provides a unique opportunity to stay ahead in the dynamic landscape of education technology. Don't miss this chance to discover new possibilities, network with like-minded professionals, and take your knowledge of edtech to the next level. Join us and be part of the educational technology revolution!"
     },
     {
         "id": 4,
         "name": "Coding for Kids Camp",
         "image": "https://i.ibb.co/txCMBBk/close-up-kid-while-having-technology-education-class.jpg",
         "price": 49.99,
-        "description": "A fun and educational coding camp for young aspiring programmers."
+        "description": "An engaging and educational coding camp designed to inspire and educate young, aspiring programmers. Join us for a fun-filled learning experience that ignites passion and fosters valuable coding skills",
+         "details" : "Welcome to the Education Technology Conference, a premier event dedicated to the forefront of educational technology. This conference provides a platform for educators, tech enthusiasts, and thought leaders to converge and explore the latest advancements and best practices in the field. Join us to discover innovative tools, network with like-minded professionals, and gain valuable insights into leveraging technology for enhanced learning experiences. Whether you're an educator looking to transform your classroom or a tech enthusiast eager to shape the future of education, this conference is your opportunity to be at the forefront of education's digital evolution. Join us in shaping the future of education through technology!"
     },
     {
         "id": 5,
-        "name": "Digital Marketing Masterclass",
+        "name": "Disital Creative Ageny Company",
         "image": "https://i.ibb.co/hgL4Cpm/11jan3.jpg",
         "price": 99.99,
-        "description": "Master the art of digital marketing with expert guidance."
+        "description": "Master the art of digital marketing with expert guidance. ",
+         "details" : "Join our Digital Marketing Masterclass, an educational event that provides invaluable expert guidance to refine your digital marketing prowess. Uncover the most recent strategies, tools, and industry insights while establishing connections with fellow professionals in the field. This masterclass is your key to excelling in the ever-evolving world of digital marketing and education. Whether you're a seasoned marketer seeking to stay ahead or a newcomer looking to build a strong foundation, this event equips you with the knowledge and networking opportunities to thrive. Elevate your digital marketing game and secure your success in this dynamic domain by joining us today!"
     },
     {
         "id": 6,
         "name": "STEM Education Expo",
         "image": "https://i.ibb.co/5LygJr7/teens-doing-experiments-robotics-laboratory-boy-vr-headset-girl-protective-glasses.jpg",
+    
         "price": 69.99,
-        "description": "Discover the latest STEM education resources and practices at the expo."
+        "description": "Explore cutting-edge STEM education resources and best practices at our education expo. Join us to discover the latest innovations and strategies in the field of STEM education.",
+         "details" : "Immerse yourself in the realm of STEM education at our STEM Education Expo, a premier educational event that highlights cutting-edge resources and practices. Dive into hands-on activities, forge connections with industry experts, and uncover inventive approaches to foster STEM learning. This expo aims to ignite a passion for science, technology, engineering, and mathematics in learners of all ages, making education both exhilarating and purposeful. Whether you're an educator, a student, or a STEM enthusiast, this event promises to inspire and equip you with the tools to promote STEM education effectively. Join us in the journey to make learning exciting and meaningful for all!"
     }
+  
 ]
