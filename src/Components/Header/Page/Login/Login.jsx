@@ -7,6 +7,7 @@ import Navber from "../../Navber/Navber";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const Login = () => {
   const {signIn,googleLogin} = useContext(AuthContext)
  
@@ -29,8 +30,15 @@ const Login = () => {
         navigate(location?.state ? location.state : '/')
       })
       .catch(error=>{
-        console.error(error);
+       Swal.fire({
+         icon: "error",
+         title: "Oops...",
+         text: " password wrong!",
+         footer: '<a href="">Why do I have this issue?</a>',
+       })(error);
+        
       })
+    
      }
      const hangleGoogleLogin = () =>{
       googleLogin()

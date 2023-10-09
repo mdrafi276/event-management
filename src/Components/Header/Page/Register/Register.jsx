@@ -9,6 +9,7 @@ import { AuthContext,  } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
 import Navber from "../../Navber/Navber";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 
 
@@ -31,25 +32,35 @@ const {createUser} = useContext(AuthContext)
   //   setRegisterErrror("Password should be must 6 Cherecters longer")
   //  }
   //  create user on register
-  createUser(  email, password)
-  .then(result=> {
-    
+
+  if(password.length < 6){
+    errorInfo("password length must nbe");
+    return;
+  }else if(/^{[A-Z]+$/.test(password)){
+    errorInfo("password should not  containy any uppercase and");
+    return;
+  }else{
+ createUser(email, password)
+   .then((result) => {
+     updateProfile(result.user, {
+       displayName: name,
+       photoURL: photo,
+     }).then(() => {
+       swal("Success!", "Your register Success", "success");
+     });
+     // navigate ater register
+     navigate(location?.state ? location.state : "/");
+   })
+   .catch((error) => {
+     Swal.fire({
+       icon: "error",
+       title: "Oops...",
+       text: "  wrong!",
+       footer: '<a href="">Why do I have this issue?</a>',
+     })(error);
+   });
+  }
  
-  updateProfile( result.user,{
-    displayName:name,
-    photoURL:photo
-    
-    
-  })
-  .then(()=>{
-     swal("Success!", "Your register Success", "success");
-  })
-    // navigate ater register 
-    navigate(location?.state ? location.state : '/')
-  })
-  .catch(error =>{
-    console.error(error);
-  })
   }
     return (
       <div>
