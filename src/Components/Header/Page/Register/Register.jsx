@@ -6,7 +6,7 @@ import './Register.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { AuthContext,  } from "../../../Provider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navber from "../../Navber/Navber";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 
 
 const Register = () => {
-  
+  const [error, setError] = useState('')
 const {createUser} = useContext(AuthContext)
  const location = useLocation();
  const navigate = useNavigate()
@@ -32,12 +32,27 @@ const {createUser} = useContext(AuthContext)
   //   setRegisterErrror("Password should be must 6 Cherecters longer")
   //  }
   //  create user on register
+  setError('')
 
   if(password.length < 6){
-    errorInfo("password length must nbe");
+    setError(
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Pass should have at 6 ceracters or longer!",
+        footer: '<a href="">Why do I have this issue?</a>',
+      })
+    );
     return;
-  }else if(/^{[A-Z]+$/.test(password)){
-    errorInfo("password should not  containy any uppercase and");
+  }else if(/^(?=.*[/W_]).*$/.test(password)){
+   setError(
+     Swal.fire({
+       icon: "error",
+       title: "Oops...",
+       text: "Your password should have at last upper case  and Special cheracters !",
+       footer: '<a href="">Why do I have this issue?</a>',
+     })
+   );
     return;
   }else{
  createUser(email, password)

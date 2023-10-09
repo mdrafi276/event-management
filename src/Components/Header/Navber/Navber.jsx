@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
  import profile from '../../../assets/user.png'
 const Navber = () => {
@@ -15,16 +15,44 @@ const Navber = () => {
      const navLink = (
        <>
          <li>
-           <Link to="/">Home</Link>
+           <NavLink
+             className={({ isActive, isLoading }) =>
+               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+             }
+             to="/"
+           >
+             Home
+           </NavLink>
          </li>
          <li>
-           <Link to="/allDetails"> All Details</Link>
+           <NavLink
+             className={({ isActive, isLoading }) =>
+               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+             }
+             to="/allDetails"
+           >
+             All Details
+           </NavLink>
          </li>
          <li>
-           <Link to="/serviceData/:id">Extra Details</Link>
+           <NavLink
+             className={({ isActive, isLoading }) =>
+               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+             }
+             to="/serviceData/:id"
+           >
+             Extra Details
+           </NavLink>
          </li>
          <li>
-           <Link to="/register">Register</Link>
+           <NavLink
+             className={({ isActive, isLoading }) =>
+               isLoading ? "loading" : isActive ? "text-white bg-black " : ""
+             }
+             to="/register"
+           >
+             Register
+           </NavLink>
          </li>
        </>
      );
