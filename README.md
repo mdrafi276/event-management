@@ -1,14 +1,14 @@
-# Education Event Manager
+# Education Event Management
 
-Welcome to the **Education Event Manager** website! This platform is designed to streamline the management and participation in educational events. Below, you'll find information about the website, how to access it, and some key features.
+Welcome to the **Education Event Management** website! This platform is designed to streamline the management and participation in educational events. Below, you'll find information about the website, how to access it, and some key features.
 
-## Website Name
+## Website Name Education Event Management
 
 **Education Event Manager**
 
 ## Website Link
 
-[Visit the Website](https://www.your-website-link.com)
+[Visit my Website](https://github.com/programming-hero-web-course-4/b8a9-event-management-mdrafi276)
 
 ### User Profiles and Dashboards:
 
