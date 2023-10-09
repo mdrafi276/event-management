@@ -9,7 +9,7 @@ const ServiceDetails = () => {
   return (
     <div>
         <Navber></Navber>
-      <div>
+      <div className="">
         {ServiceData.map((allItems) => (
           <AllDetails key={allItems.id} ServiceData={allItems}></AllDetails>
         ))}

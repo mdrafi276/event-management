@@ -14,7 +14,7 @@ const ExtraService = () => {
           {findService && (
             <div>
               <div
-                className="hero lg:w-[1000px] h-[100vh]  md:h-[100vh] mx-auto mt-10 lg:h-[500px]"
+                className="hero lg:w-[100%] h-[100vh]  md:h-[100vh] mx-auto mt-10 lg:h-[600px]"
                 style={{
                   backgroundImage: `url(${findService.service_img})`,
                 }}

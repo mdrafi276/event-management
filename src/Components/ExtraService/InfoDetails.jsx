@@ -13,7 +13,7 @@ const InfoDetails = () => {
           {findData && (
             <div>
               <div
-                className="hero lg:w-[1000px] h-[100vh]  md:h-[100vh] mx-auto mt-10 lg:h-[500px]"
+                className="hero lg:w-[100%] h-[100vh]  md:h-[100vh] mx-auto mt-10 lg:h-[600px]"
                 style={{
                   backgroundImage: `url(${findData.image})`,
                 }}
@@ -28,7 +28,7 @@ const InfoDetails = () => {
                   </div>
                 </div>
                 <Link to="/allDetails">
-                  <button className="btn bg-orange-600 md:mt-40 mt-52 bg-orange-600 border-none hover:bg-black hover:text-white lg:mt-[28rem]  ">
+                  <button className="btn bg-orange-600 md:mt-40 mt-52  border-none hover:bg-black hover:text-white lg:mt-[28rem]  ">
                     All Details
                   </button>
                 </Link>

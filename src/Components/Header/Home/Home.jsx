@@ -18,7 +18,12 @@ const Home = () => {
           <Navber></Navber>
           <Banner></Banner>
         </div>
-        <div className="mt-12 max-w-[1000px] text-center mx-auto ">
+        <div
+          className="mt-12 max-w-[1000px] text-center mx-auto "
+          data-aos="fade-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
           <h1 id="title-section" className="  text-xl md:text-5xl">
             Education Event Excellence: Navigating the Future of Learning
           </h1>
@@ -29,8 +34,16 @@ const Home = () => {
             of education.
           </p>
         </div>
-        <div className="mt-16">
-          <h1 id="our-service" className="text-4xl text-black text-center"> Our Service</h1>
+        <div
+          className="mt-16"
+          data-aos="fade-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="500"
+        >
+          <h1 id="our-service" className="text-4xl text-black text-center">
+            {" "}
+            Our Service
+          </h1>
         </div>
         <div className="flex justify-center flex-row-reverse">
           <div className="grid  grid-cols-1 xl:grid-cols-3 md:w-full md:text-center gap-10 mt-12  lg:grid-cols-2">
@@ -38,11 +51,9 @@ const Home = () => {
               <Service key={allData.id} ServiceData={allData}></Service>
             ))}
           </div>
-         
         </div>
         <div>
           <ServiceHero></ServiceHero>
-          
         </div>
         <div>
           <NewEvent></NewEvent>

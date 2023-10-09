@@ -5,7 +5,12 @@ const About = () => {
       <div>
         <div className="grid mt-20 mb-16  grid-cols-1 w-full  md:grid-cols-2 lg:grid-cols-4">
           {/* first div */}
-          <div className=" p-5">
+          <div
+            className=" p-5"
+            data-aos="flip-left"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <h1 className=" text-black font-bold pb-2 text-xl  border-b-2 border-b-orange-500">
               ABOUT US
             </h1>
@@ -22,10 +27,10 @@ const About = () => {
               aliquet. Aenean sollicitudin, lorem quis.
             </h1>
             <hr />
-               
+
             <div className="flex gap-2 mt-5 items-center">
               <h1>
-                 <FaPhoneVolume></FaPhoneVolume>
+                <FaPhoneVolume></FaPhoneVolume>
               </h1>
               <h1> +01741653071</h1>
             </div>
@@ -40,7 +45,12 @@ const About = () => {
             </div>
           </div>
           {/* second div   */}
-          <div className="p-5 cursor-pointer">
+          <div
+            className="p-5 cursor-pointer"
+            data-aos="flip-left"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <h1 className="  text-black font-bold pb-2 text-xl  border-b-2 border-b-orange-500 ">
               POPULAR SEARCHES
             </h1>
@@ -67,7 +77,12 @@ const About = () => {
             </h1>
           </div>
           {/* third div  */}
-          <div className="p-5">
+          <div
+            className="p-5"
+            data-aos="flip-left"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <h1 className="  text-black font-bold pb-2 text-xl border-b-2 border-b-orange-500 ">
               RECENT TWEETS
             </h1>
@@ -77,7 +92,12 @@ const About = () => {
           </div>
 
           {/* fourth div */}
-          <div className="p-5 ">
+          <div
+            className="p-5 "
+            data-aos="flip-left"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <h1 className=" text-black font-bold pb-2  text-xl  border-b-2 border-b-orange-500 ">
               INSTAGRAM PHOTOS
             </h1>

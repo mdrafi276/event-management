@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+ import profile from '../../../assets/user.png'
 const Navber = () => {
+  
      const { user,logOut } = useContext(AuthContext);
+     console.log(user);
      const handleSignOut = () =>{
      logOut()
      .then()
@@ -38,13 +40,16 @@ const Navber = () => {
                >
                  {" "}
                  <span>
-                   <img className="w-10 rounded-full" src="/src/assets/logo.jpg" alt="" />
+                   <img
+                     className="w-10 rounded-full"
+                     src="/src/assets/logo.jpg"
+                     alt=""
+                   />
                  </span>
                  <span>EDUCONFOMASTER</span>
                </h1>
                <div className="dropdown">
                  <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                   <h1>hello world</h1>
                    <svg
                      xmlns="http://www.w3.org/2000/svg"
                      className="h-5 w-5"
@@ -68,22 +73,34 @@ const Navber = () => {
                  </ul>
                </div>
              </div>
-             <div className="navbar-center hidden lg:flex">
+             <div className="navbar-center hidden  lg:flex">
                <ul className="menu menu-horizontal px-1">{navLink}</ul>
              </div>
-             <div className="navbar-end">
-               <label tabIndex={0} className=" btn btn-ghost btn-circle avatar">
-                 <div className="w-10 rounded-full">
-                   <img src="./src/assets/user.png" alt="" />
-                 </div>
+             <div className="navbar-end ">
+               {user && (
+                 <p className="md:mr-5 text-[10px] md:text-[12px] lg:text-[15px] font-bold">
+                   {user.displayName}
+                 </p>
+               )}
+               <label
+                 tabIndex={0}
+                 className=" md:mr-5 btn btn-ghost btn-circle avatar"
+               >
+                 <img
+                   className="rounded-full "
+                   src={user?.photoURL ? user.photoURL : profile}
+                   alt=""
+                 />
                </label>
                {user ? (
-                 <button
-                   onClick={handleSignOut}
-                   className="btn bg-orange-600 hover:bg-black hover:text-white "
-                 >
-                   LogOut
-                 </button>
+                 <div>
+                   <button
+                     onClick={handleSignOut}
+                     className="btn bg-orange-600 hover:bg-black hover:text-white "
+                   >
+                     LogOut
+                   </button>
+                 </div>
                ) : (
                  <Link to="/login">
                    <button className="btn bg-orange-600 hover:bg-black hover:text-white ">

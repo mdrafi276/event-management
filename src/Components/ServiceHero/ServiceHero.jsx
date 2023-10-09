@@ -6,12 +6,20 @@ const ServiceHero = (ServiceData) => {
   return (
     <div>
       <div className="hero min-h-screen ">
-        <div className="hero-content gap-6 md:gap-20 flex-col lg:flex-row">
+        <div className="hero-content gap-6 md:gap-20 w-full flex-col lg:flex-row">
           <img
             src="https://i.ibb.co/gRWkz6F/4280558-17629.jpg"
-            className="max-w-sm   rounded-lg shadow-2xl"
+            className="md:max-w-sm w-full  rounded-lg shadow-2xl"
+            data-aos="fade-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="500"
           />
-          <div className="text-center">
+          <div
+            className="text-center"
+            data-aos="fade-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="500"
+          >
             <h1
               id="event-space"
               className=" text-2xl  md:text-4xl text-center "

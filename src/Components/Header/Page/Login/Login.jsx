@@ -1,5 +1,6 @@
 
 import {  FaGoogle, FaRegEnvelope,  FaUnlock } from "react-icons/fa";
+import swal from "sweetalert";
 
 import './Login.css'
 import Navber from "../../Navber/Navber";
@@ -21,8 +22,9 @@ const Login = () => {
      const password = e.target.password.value;
       console.log(email, password);
       signIn(email,password)
-      .then(result =>{
-        console.log(result.user);
+      .then(() =>{
+        swal("Success!", "Your Login Success!", "success");
+
 
         navigate(location?.state ? location.state : '/')
       })
@@ -32,7 +34,9 @@ const Login = () => {
      }
      const hangleGoogleLogin = () =>{
       googleLogin()
-      .then()
+      .then(() =>{
+        swal("Good job!", "User Login Success!", "success");
+      })
       .catch()
      }
 
@@ -41,9 +45,13 @@ const Login = () => {
         <Navber></Navber>
         <div className="body">
           <section>
-            <div className="login-box">
+            <div
+              className="login-box"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
               <form onSubmit={handleLogin}>
-                <h2>Login</h2>
                 <div className="input-box">
                   <span className="icon">
                     <FaRegEnvelope></FaRegEnvelope>
@@ -69,7 +77,6 @@ const Login = () => {
                     <input type="checkbox" name="checkbox" id="" />
                     Remember Me
                   </label>
-                  
                 </div>
                 <button className="submit-btn" type="submit">
                   Login
@@ -82,8 +89,10 @@ const Login = () => {
                     </Link>
                   </p>
                   <p className="">
-                   
-                    <button onClick={hangleGoogleLogin} className="btn mt-8 hover:bg-white rounded-full hover:text-black btn-outline w-full">
+                    <button
+                      onClick={hangleGoogleLogin}
+                      className="btn mt-8 hover:bg-white rounded-full hover:text-black btn-outline w-full"
+                    >
                       <FaGoogle></FaGoogle>
                       Google
                     </button>

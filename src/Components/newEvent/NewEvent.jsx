@@ -5,7 +5,11 @@ const NewEvent = () => {
     return (
       <div>
         <div className=" h-[200px] w-full border-b-orange-600 border border-b-4 md:h-[120px] bg-gray-950 items-center md:gap-12 mt-20 justify-center  flex flex-col md:flex-row">
-          <div>
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <h1 className="text-white text-xl md:text-xl lg:text-2xl">
               CREATE YOUR OWN NEW EVENT
             </h1>
@@ -18,14 +22,19 @@ const NewEvent = () => {
           <div>
             <Link to="/login">
               {" "}
-              <button className="btn bg-orange-600 hover:bg-white hover:text-black btn-secondary">
+              <button
+                className="btn bg-orange-600 hover:bg-white hover:text-black btn-secondary"
+                data-aos="fade-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              >
                 Please Login
               </button>
             </Link>
           </div>
         </div>
         {/* section too for service  */}
-       <About></About>
+        <About></About>
       </div>
     );
 };

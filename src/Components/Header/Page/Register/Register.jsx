@@ -1,5 +1,6 @@
 
 import {   FaUnlock,FaCamera, FaPen, FaRegEnvelope } from "react-icons/fa";
+import swal from "sweetalert";
 
 import './Register.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -7,8 +8,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext,  } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
 import Navber from "../../Navber/Navber";
+import { updateProfile } from "firebase/auth";
+
+
 
 const Register = () => {
+  
 const {createUser} = useContext(AuthContext)
  const location = useLocation();
  const navigate = useNavigate()
@@ -20,10 +25,25 @@ const {createUser} = useContext(AuthContext)
    const photo = e.target.photo.value;
    const name = e.target.name.value;
    console.log(email, password , name, photo);
+  //  setRegisterErrror('')
+
+  //  if(password.length < 6){
+  //   setRegisterErrror("Password should be must 6 Cherecters longer")
+  //  }
   //  create user on register
-  createUser(email, password)
-  .then(result => {
-    console.log(result.user);
+  createUser(  email, password)
+  .then(result=> {
+    
+ 
+  updateProfile( result.user,{
+    displayName:name,
+    photoURL:photo
+    
+    
+  })
+  .then(()=>{
+     swal("Success!", "Your register Success", "success");
+  })
     // navigate ater register 
     navigate(location?.state ? location.state : '/')
   })
@@ -37,20 +57,24 @@ const {createUser} = useContext(AuthContext)
 
         <div className="body">
           <section>
-            <div className="login-box">
+            <div
+              className="login-box"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1200"
+            >
               <form onSubmit={handleRegister}>
-                
                 <div className="input-box">
                   <span className="icon">
                     <FaPen></FaPen>
                   </span>
-                  
+
                   <input type="text" name="name" required id="" />
                   <label>Name</label>
                 </div>
                 <div className="input-box">
                   <span className="icon">
-                  <FaCamera></FaCamera>
+                    <FaCamera></FaCamera>
                   </span>
                   <input type="text" name="photo" required id="" />
                   <label>Photo URL</label>
@@ -81,7 +105,7 @@ const {createUser} = useContext(AuthContext)
                     Remember Me
                   </label>
                 </div>
-                <button className="submit-btn" type="submit">
+                <button id="i-am-tu-obak" className="submit-btn" type="submit">
                   Register
                 </button>
                 <div className="register-link">
